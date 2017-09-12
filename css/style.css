@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'JagAlskarDig';
+  src: url('../fonts/JagAlskarDig.otf'); /* IE9 Compat Modes */
+}
+
+a {	
+	text-decoration: none !important;
+}
+
+.page-layout {
+	background-image: url("../img/background.jpg");
+}
+
+.logo-wrapper {
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 72%;
+}
+
+.logo {
+	font-family: JagAlskarDig;
+    font-size: 60px;
+    color: #c5db7f;
+}
+
+.logo:hover {
+   color: #d9a0ff;
+   cursor: pointer;
+}
+
+.user-form-wrapper {
+   width: 50%;
+   margin: 0 auto;
+   margin-top: 20px;
+}
+
+.account-form-wrapper {
+   width: 50%;
+   margin: 0 auto;
+   margin-top: 20px;
+}
+
+.auth {
+	margin-top: 20px;
+}
+
+.accounts-table {
+
+}
+
+.author-wrapper {
+	margin: 0 auto;
+    margin-top: 40px;;
+    margin-right: 50px;
+    width: 28%;
+}
+
+.author {
+	font-family: JagAlskarDig;
+    font-size: 35px;
+    color: #600303;
+}
+
+.author:hover {
+   color: #d9a0ff;
+   cursor: pointer;
+}
+
+.form-data {
+	color: #c5db7f; 
+	font-size: 24px;
+}
