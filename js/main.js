@@ -29,34 +29,48 @@ $(document).ready(function(){
         $(".user-form-wrapper").hide("slow");
         $(".account-form-wrapper").hide("slow");
         var usersTable =  '<div class="accounts-table">' +
-							   '<table>' +
+							   '<table class="table table-striped">' +
 								   '<tr>' +
 									   	'<th>Name</th>' +
 									   	'<th>Email</th>' +
 									   	'<th>Address</th>' +
-									   	'<th>accounts</th>' +
+									   	'<th>Accounts</th>' +
 									   	'<th>Date added</th>' +
 								   '<tr>' +
 								   '<tr>' +
-									   	'<td>User1</td>' +
-									   	'<td>1@test.com</td>' +
-									   	'<td>USA</td>' +
-									   	'<td>1</td>' +
-									   	'<td>2016-08-01</td>' +
+									   	'<td class="success">User1</td>' +
+									   	'<td class="success">1@test.com</td>' +
+									   	'<td class="success">USA</td>' +
+									   	'<td class="success">1</td>' +
+									   	'<td class="success">2016-08-01</td>' +
 								   '<tr>' +
 							   	   '<tr>' +
-									   	'<td>User2</td>' +
-									   	'<td>2@test.com</td>' +
-									   	'<td>Europe</td>' +
-									   	'<td>98</td>' +
-									   	'<td>2016-08-01</td>' +
+									   	'<td class="danger">User2</td>' +
+									   	'<td class="danger">2@test.com</td>' +
+									   	'<td class="danger">Europe</td>' +
+									   	'<td class="danger">98</td>' +
+									   	'<td class="danger">2016-08-01</td>' +
 								   '<tr>' +
 								   '<tr>' +
-									   	'<td>User3</td>' +
-									   	'<td>3@test.com</td>' +
-									   	'<td>Europe</td>' +
-									   	'<td>2</td>' +
-									   	'<td>2016-08-01</td>' +
+									   	'<td class="success">User3</td>' +
+									   	'<td class="success">3@test.com</td>' +
+									   	'<td class="success">Europe</td>' +
+									   	'<td class="success">2</td>' +
+									   	'<td class="success">2016-08-01</td>' +
+								   '<tr>' + 
+								   '<tr>' +
+									   	'<td class="danger">User2</td>' +
+									   	'<td class="danger">2@test.com</td>' +
+									   	'<td class="danger">Europe</td>' +
+									   	'<td class="danger">98</td>' +
+									   	'<td class="danger">2016-08-01</td>' +
+								   '<tr>' +
+								   '<tr>' +
+									   	'<td class="success">User3</td>' +
+									   	'<td class="success">3@test.com</td>' +
+									   	'<td class="success">Europe</td>' +
+									   	'<td class="success">2</td>' +
+									   	'<td class="success">2016-08-01</td>' +
 								   '<tr>'
 							   '</table>'
 						   '</div>';

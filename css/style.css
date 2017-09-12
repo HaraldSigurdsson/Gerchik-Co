@@ -45,7 +45,14 @@ a {
 }
 
 .accounts-table {
+	height: auto;
+	color: #0f48a8;
+	margin-top: 50px;
+	text-align: center;
+}
 
+.accounts-table th{
+	text-align: center;
 }
 
 .author-wrapper {
