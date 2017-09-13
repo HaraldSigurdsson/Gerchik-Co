@@ -34,10 +34,30 @@ a {
    margin-top: 20px;
 }
 
+.my-form {
+
+}
+
 .account-form-wrapper {
    width: 50%;
    margin: 0 auto;
    margin-top: 20px;
+}
+
+.user-form-wrapper {
+   width: 50%;
+   margin: 0 auto;
+   margin-top: 20px;
+}
+
+
+
+#saveMessage {
+
+}
+
+.table-wrapper {
+	
 }
 
 .auth {
@@ -52,6 +72,9 @@ a {
 }
 
 .accounts-table th{
+	height: auto;
+	color: #0f48a8;
+	margin-top: 50px;
 	text-align: center;
 }
 

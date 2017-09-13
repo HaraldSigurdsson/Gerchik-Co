@@ -1,80 +1,96 @@
 $(document).ready(function(){
     
-    $("#createUser").click(function(){
-        $("#createUser").hide();
+    var user = false;
+    var account = false;
+    var tables = false;
+
+    function createUser() {
+    	var name = $('#inputName').val();
+    	var mail = $('#inputMail').val();
+    	var address = $('#inputAddress').val();
+
+    	if (name == '' || mail == '' || address == '') {
+    		
+    		alert("FILL IN THE FORM PLEASE!!!");
+
+    		return;
+
+    	} else if(user == false && name != '' && mail != '' && address != '') {
+    		user = true;
+    		$("#saveMessage").show().delay("slow").fadeIn();
+    		$(".user-form-wrapper").hide("slow");
+    		$(".account-form-wrapper").show("slow");
+    	 	return;
+    	} else if(user == true) {
+    		alert("CREATE ACCOUNT!!!");
+    	}
+    }
+
+
+    function createAccount() {
+	    
+	    var email = $('#inputMailTwo').val();
+	    var accountValue = $('#inputAccount').val();
+
+	    if (email == '' || accountValue == '') {
+    		
+    		alert("FILL IN THE FORM PLEASE!!!");
+
+    		return;
+
+    	}else if(account == false) {
+    		account = true;
+    		user = true;
+    		$("#saveMessageTwo").show().delay("slow").fadeIn();
+    		$(".user-form-wrapper").hide("slow");
+    		$(".account-form-wrapper").show("slow");
+    		window.setTimeout('location.reload()', 2000);
+    		return;
+    	}
+    }
+
+ 
+    function showUsers() {
+
+    	if(user == true){
+			alert("CREATE ACCOUNT!!!");
+			return;
+    	}
+
+    	if(tables == false) {
+    		tables =true;
+    		$(".table-wrapper").show("slow");	
+    	}else if (tables == true) {
+    		tables =false;
+    		$(".table-wrapper").hide("slow");	
+        }
+        
+    }
+
+    $("#createUserFirst").click(function(){
+    		
+     	createUser();
+ 
     });
 
-
-    $("#createAccount").click(function(){
-        $(".user-form-wrapper").hide("slow");
-        var accountForm =  '<div class="account-form-wrapper">' +
-						   '<form>' +
-						   '<div class="form-group">' +
-						   '<label class="form-data" for="inputEmail">Email</label>' + 
-						   ' <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email...">' +
-						   '</div>' +
-						   '<div class="form-group">' +
-						   '<label class="form-data" for="inputPassword">Account</label>' +
-						   '<input type="password" class="form-control" id="inputPassword" placeholder="Enter your account....">' +
-						   '</div>' +
-						   '<button id="createUser" type="button" class="btn-lg btn-primary">Create User</button>' +
-						   '<button id="createAccount" type="button" class="btn-lg btn-warning">Create Account</button>' +
-						   '<button id="showUsers" type="button" class="btn-lg btn-primary">Show Users</button>' +
-						   '</form>' +
-						   '</div>';
-        $("#forms-box").append(accountForm);
+     $("#createUserSecond").click(function(){
+    	
+     	createUser(); 
+ 
     });
 
-    $("#showUsers").click(function(){
-        $(".user-form-wrapper").hide("slow");
-        $(".account-form-wrapper").hide("slow");
-        var usersTable =  '<div class="accounts-table">' +
-							   '<table class="table table-striped">' +
-								   '<tr>' +
-									   	'<th>Name</th>' +
-									   	'<th>Email</th>' +
-									   	'<th>Address</th>' +
-									   	'<th>Accounts</th>' +
-									   	'<th>Date added</th>' +
-								   '<tr>' +
-								   '<tr>' +
-									   	'<td class="success">User1</td>' +
-									   	'<td class="success">1@test.com</td>' +
-									   	'<td class="success">USA</td>' +
-									   	'<td class="success">1</td>' +
-									   	'<td class="success">2016-08-01</td>' +
-								   '<tr>' +
-							   	   '<tr>' +
-									   	'<td class="danger">User2</td>' +
-									   	'<td class="danger">2@test.com</td>' +
-									   	'<td class="danger">Europe</td>' +
-									   	'<td class="danger">98</td>' +
-									   	'<td class="danger">2016-08-01</td>' +
-								   '<tr>' +
-								   '<tr>' +
-									   	'<td class="success">User3</td>' +
-									   	'<td class="success">3@test.com</td>' +
-									   	'<td class="success">Europe</td>' +
-									   	'<td class="success">2</td>' +
-									   	'<td class="success">2016-08-01</td>' +
-								   '<tr>' + 
-								   '<tr>' +
-									   	'<td class="danger">User2</td>' +
-									   	'<td class="danger">2@test.com</td>' +
-									   	'<td class="danger">Europe</td>' +
-									   	'<td class="danger">98</td>' +
-									   	'<td class="danger">2016-08-01</td>' +
-								   '<tr>' +
-								   '<tr>' +
-									   	'<td class="success">User3</td>' +
-									   	'<td class="success">3@test.com</td>' +
-									   	'<td class="success">Europe</td>' +
-									   	'<td class="success">2</td>' +
-									   	'<td class="success">2016-08-01</td>' +
-								   '<tr>'
-							   '</table>'
-						   '</div>';
-        $("#forms-box").append(usersTable);
+    $("#createAccountFirst").click(function(){
+        createAccount();
+    });
+
+     $("#createAccountSecond").click(function(){
+        createAccount();
+    });
+
+    $("#showUsersFirst").click(function(){
+
+        showUsers();
+
     });
 
 });
