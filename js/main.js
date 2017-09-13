@@ -20,13 +20,12 @@ $(document).ready(function(){
     		
             var dataString = 'name1='+ name + '&email1='+ mail + '&address1='+ address;
 
-    		user = true;
-    		//var formData = {name:"ravi",age:"31"}; //Array  
+    		user = true;  
 
             $.ajax({
                 url : "./create_user.php",
                 type: "POST",
-                data : dataString,
+                data : ({Username:name, Usermail: mail, Useraddress: address}),
                 success: function(data, textStatus, jqXHR)
                  {
                      console.log(data);
@@ -37,13 +36,13 @@ $(document).ready(function(){
 
                 },
             });
-    		$("#saveMessage").show().delay("slow").fadeIn();
+    		
+            $("#saveMessage").show().delay("slow").fadeIn();
     		$(".user-form-wrapper").hide("slow");
     		$(".account-form-wrapper").show("slow");
-           
-            
-
+        
     	 	return;
+
     	} else if(user == true) {
     		
     		alert("CREATE ACCOUNT!!!");
@@ -66,13 +65,15 @@ $(document).ready(function(){
     		return;
 
     	}else if(account == false) {
-    		account = true;
+    		
+            account = true;
     		user = true;
             var dataString = 'email1='+ email + '&account1='+ accountValue;
+           
             $.ajax({
                 url : "./create_account.php",
                 type: "POST",
-                data : dataString,
+                data : ({Usermail:email, Accountvalue: accountValue}),
                 success: function(data, textStatus, jqXHR)
                  {
                      console.log(data);
