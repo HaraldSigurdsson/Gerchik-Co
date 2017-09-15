@@ -19,10 +19,15 @@ $sql = "INSERT INTO users (usr_name, usr_email, usr_address)
 VALUES ('$name', '$mail', '$address')";
 
 if ($conn->query($sql) === TRUE) {
+    
     echo "New record created successfully";
+
 } else {
+    
     echo "Error: " . $sql . "<br>" . $conn->error;
+
 }
 
 $conn->close();
+
  ?>

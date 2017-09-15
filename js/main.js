@@ -13,13 +13,11 @@ $(document).ready(function(){
     	if (name == '' || mail == '' || address == '') {
     		
     		alert("FILL IN THE FORM PLEASE!!!");
-
     		return;
 
     	} else if(user == false && name != '' && mail != '' && address != '') {
     		
             var dataString = 'name1='+ name + '&email1='+ mail + '&address1='+ address;
-
     		user = true;  
 
             $.ajax({
@@ -33,7 +31,7 @@ $(document).ready(function(){
                  },
                 error: function (jqXHR, textStatus, errorThrown)
                 {
-
+                    console.log(textStatus);
                 },
             });
     		
@@ -44,9 +42,8 @@ $(document).ready(function(){
     	 	return;
 
     	} else if(user == true) {
-    		
-    		alert("CREATE ACCOUNT!!!");
 
+    		alert("CREATE ACCOUNT!!!");
     	}
     }
 
@@ -55,8 +52,6 @@ $(document).ready(function(){
 	    
 	    var email = $('#inputMailTwo').val();
 	    var accountValue = $('#inputAccount').val();
-
-
 
 	    if (email == '' || accountValue == '') {
     		
@@ -89,23 +84,40 @@ $(document).ready(function(){
     		$(".user-form-wrapper").hide("slow");
     		$(".account-form-wrapper").show("slow");
 
-    		window.setTimeout('location.reload()', 2000);
+    		window.setTimeout('location.reload()', 1500);
     		return;
     	}
     }
 
- 
     function showUsers() {
 
     	if(user == true){
-			alert("CREATE ACCOUNT!!!");
+			
+            alert("CREATE ACCOUNT!!!");
 			return;
     	}
 
     	if(tables == false) {
     		
     		tables =true;
-    		$(".table-wrapper").show("slow");
+
+            $.ajax({
+                url : "./show_table.php",
+                type: "GET",
+                dataType: "html",
+                success: function(data, textStatus, jqXHR)
+                 {
+                     console.log(data);
+                     console.log(textStatus);
+                     $(".table-wrapper").show("slow");
+                     return $('.accounts-table').html(data);
+                 },
+                error: function (jqXHR, textStatus, errorThrown)
+                {
+
+                },
+            });
+    		
 
     	}else if (tables == true) {
 
@@ -122,11 +134,13 @@ $(document).ready(function(){
  
     });
 
+
     $("#createUserSecond").click(function(){
     	
      	createUser(); 
  
     });
+    
 
     $("#createAccountFirst").click(function(){
 
@@ -134,11 +148,13 @@ $(document).ready(function(){
 
     });
 
+
      $("#createAccountSecond").click(function(){
 
         createAccount();
 
     });
+
 
     $("#showUsersFirst").click(function(){
 

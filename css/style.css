@@ -1,37 +1,37 @@
 @font-face {
-  font-family: 'JagAlskarDig';
-  src: url('../fonts/JagAlskarDig.otf'); /* IE9 Compat Modes */
+font-family: 'JagAlskarDig';
+src: url('../fonts/JagAlskarDig.otf'); /* IE9 Compat Modes */
 }
 
 a {	
-	text-decoration: none !important;
+text-decoration: none !important;
 }
 
 .page-layout {
-	background-image: url("../img/background.jpg");
+background-image: url("../img/background.jpg");
 }
 
 .logo-wrapper {
-    margin: 0 auto;
-    margin-top: 70px;
-    width: 72%;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 72%;
 }
 
 .logo {
-	font-family: JagAlskarDig;
-    font-size: 60px;
-    color: #c5db7f;
+font-family: JagAlskarDig;
+  font-size: 60px;
+  color: #c5db7f;
 }
 
 .logo:hover {
-   color: #d9a0ff;
-   cursor: pointer;
+ color: #d9a0ff;
+ cursor: pointer;
 }
 
 .user-form-wrapper {
-   width: 50%;
-   margin: 0 auto;
-   margin-top: 20px;
+ width: 50%;
+ margin: 0 auto;
+ margin-top: 20px;
 }
 
 .my-form {
@@ -39,15 +39,15 @@ a {
 }
 
 .account-form-wrapper {
-   width: 50%;
-   margin: 0 auto;
-   margin-top: 20px;
+ width: 50%;
+ margin: 0 auto;
+ margin-top: 20px;
 }
 
 .user-form-wrapper {
-   width: 50%;
-   margin: 0 auto;
-   margin-top: 20px;
+ width: 50%;
+ margin: 0 auto;
+ margin-top: 20px;
 }
 
 
@@ -57,46 +57,46 @@ a {
 }
 
 .table-wrapper {
-	
+
 }
 
 .auth {
-	margin-top: 20px;
+margin-top: 20px;
 }
 
 .accounts-table {
-	height: auto;
-	color: #0f48a8;
-	margin-top: 50px;
-	text-align: center;
+height: auto;
+color: #0f48a8;
+margin-top: 50px;
+text-align: center;
 }
 
 .accounts-table th{
-	height: auto;
-	color: #0f48a8;
-	margin-top: 50px;
-	text-align: center;
+height: auto;
+color: #0f48a8;
+margin-top: 50px;
+text-align: center;
 }
 
 .author-wrapper {
-	margin: 0 auto;
-    margin-top: 40px;;
-    margin-right: 50px;
-    width: 28%;
+margin: 0 auto;
+  margin-top: 40px;;
+  margin-right: 50px;
+  width: 28%;
 }
 
 .author {
-	font-family: JagAlskarDig;
-    font-size: 35px;
-    color: #600303;
+font-family: JagAlskarDig;
+  font-size: 35px;
+  color: #600303;
 }
 
 .author:hover {
-   color: #d9a0ff;
-   cursor: pointer;
+ color: #d9a0ff;
+ cursor: pointer;
 }
 
 .form-data {
-	color: #c5db7f; 
-	font-size: 24px;
+color: #c5db7f; 
+font-size: 24px;
 }
